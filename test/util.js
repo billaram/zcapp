@@ -30,6 +30,7 @@ describe('Parsing Criteria Util',function(){
 })
 describe('Get given date should be in desired format',function(){
 	it('parse date into dd-mmm-yyyy hh:mm:ss',function(){
+		var actualdate = new Date('Sat Mar 25 2017 23:36:41 GMT+0530 (IST)');
 		expect(Util.formatDate(actualdate,'Asia/Kolkata','DD-MMM-YYYY HH:mm:ss')).to.equal('25-Mar-2017 23:36:41')
 	})
 })
