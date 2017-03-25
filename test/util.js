@@ -32,6 +32,6 @@ describe('Get given date should be in desired format',function(){
 	it('parse date into dd-mmm-yyyy hh:mm:ss',function(){
 		var actualdate = new Date('Sat Mar 25 2017 23:36:41 GMT+0530 (IST)');
 		console.log(actualdate)
-		expect(Util.formatDate(actualdate,'default')).to.equal('Sat Mar 25 2017 23:36:41')
+		expect(Util.formatDate(actualdate,'default')).to.equal('Sat Mar 25 2017 18:06:41')
 	})
 })
