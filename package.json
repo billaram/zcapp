@@ -1,6 +1,6 @@
 {
   "name": "zcapp",
-  "version": "0.0.0-development",
+  "version": "0.0.0-semantically-released",
   "description": "Zoho creator API node sdk",
   "main": "src/index.js",
   "scripts": {
