@@ -3,23 +3,21 @@ Creator CRUD API node driver, It connects to app scope and then APIs like create
 
 # Getting Started
 
-* clone this repo 
-* cd zcapp
-* npm install
+* npm install zcapp
 
 ## Create record 
 
 ```javascript
-var ZCapp = require('./app/ZCapp')
+var ZCapp = require('zcapp')
 var app = new ZCapp({
-	appName:'task-app',
-	ownername:'ramkumarm1',
+	appName:'appLinkName',
+	ownername:'zc_ownername',
 	authtoken:process.env.ZCTOKEN
 })
 
 var formdata = {
-	title:"Test Task",
-	description:"Test",
+	title:"Test data",
+	description:"description",
 	task_type:"feat"
 	
 
@@ -28,6 +26,37 @@ app.form('tasks').add(formdata)
 	.then((response) => {
 		
 		console.log('ADD RECORD',JSON.stringify(response,null,4))
+		/* sample response
+			{
+			    "actualresponse": {
+			        "formname": [
+			            "tasks",
+			            {
+			                "operation": [
+			                    "add",
+			                    {
+			                        "values": {
+			                            "description": "description",
+			                            "ID": 1946659000002034343,
+			                            "title": "Test data",
+			                            "task_type": "feat"
+			                        },
+			                        "status": "Success"
+			                    }
+			                ]
+			            }
+			        ]
+			    },
+			    "data": {
+			        "description": "description",
+			        "ID": 1946659000002030000,
+			        "title": "Test data",
+			        "task_type": "feat"
+			    },
+			    "status": "success"
+			}
+
+		*/
 		
 	
 	})
