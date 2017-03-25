@@ -1,4 +1,4 @@
-#ZCApp
+# ZCApp
 [![travis build](https://img.shields.io/travis/billaram/zcapp.svg?style=flat-square)](https://travis-ci.org/billaram/zcapp)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
