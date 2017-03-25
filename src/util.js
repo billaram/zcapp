@@ -1,3 +1,4 @@
+var dateFormat = require('dateformat')
 var Util = (function(){
 
 	var parseCriteria = function(criteria)
@@ -26,8 +27,14 @@ var Util = (function(){
 
 	}
 
+	var formatDate = function(date,format)
+	{
+		return dateFormat(date,format)
+	}
+
 	return{
-		parseCriteria:parseCriteria
+		parseCriteria:parseCriteria,
+		formatDate:formatDate
 	}
 })()
 
