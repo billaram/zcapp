@@ -16,12 +16,13 @@ Zoho Creator CRUD API node driver connects to app scope and then APIs like creat
 
 All response structures are common 
 ```javascript
+
 	{
 		actualresponse:'// holds actual response sent by creator',
 		data:'null if status failed otherwise holds proper parsed response',
 		status:"success or failed"
 	}
-}
+
 ```
 ## Example
 
@@ -44,8 +45,6 @@ var formdata = {
 //Create Record API
 app.form('formLinkName').add(formdata)
 	.then((response) => {
-		
-		console.log('ADD RECORD',JSON.stringify(response,null,4))
 		/* sample response
 			{
 			    "actualresponse": {
