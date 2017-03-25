@@ -1,4 +1,5 @@
-var dateFormat = require('dateformat')
+var moment = require('moment-timezone')
+//moment.tz.load(require('.data/packed/latest.json'));
 var Util = (function(){
 
 	var parseCriteria = function(criteria)
@@ -27,9 +28,10 @@ var Util = (function(){
 
 	}
 
-	var formatDate = function(date,format)
+	var formatDate = function(date,timezone,format)
 	{
-		return dateFormat(date,format)
+		m_date= moment(date)
+		return m_date.tz(timezone).format(format)
 	}
 
 	return{
