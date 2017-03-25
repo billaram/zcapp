@@ -2,11 +2,11 @@
   "name": "zcapp",
   "version": "1.0.0",
   "description": "Zoho creator API node sdk",
-  "main": "index.js",
+  "main": "src/app/ZCapp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ramkumar M <ramkumar.m@zohocorp.com>",
+  "author": "Ramkumar M <ramchiyan1093@gmail.com >",
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.5.0",
