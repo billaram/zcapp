@@ -13,7 +13,6 @@ var Util = (function(){
 				if(value instanceof Object)
 				{
 					q = field +value.op+'"'+value.value+'"';
-					console.log('q',q)
 				}
 				else
 				{

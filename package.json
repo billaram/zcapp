@@ -1,10 +1,12 @@
 {
   "name": "zcapp",
-  "version": "1.0.3",
+  "version": "0.0.0-development",
   "description": "Zoho creator API node sdk",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/*.js -w",
+    "commit":"git cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Ramkumar M <ramchiyan1093@gmail.com >",
   "license": "MIT",
@@ -13,10 +15,21 @@
     "querystring": "^0.2.0",
     "request": "^2.81.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "3.5.0",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
+    "mocha": "3.2.0",
+    "semantic-release": "^6.3.2"
+  },
+  "config":{
+    "commitizen":{
+      "path":"node_modules/cz-conventional-changelog"
+    }
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/billaram/zcapp.git"
+    "url": "https://github.com/billaram/zcapp.git"
   },
   "keywords": [
     "Zoho",
