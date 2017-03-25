@@ -12,12 +12,6 @@ class ZCapp
 		this.forms = {}
 		this.currentView
 	}
-
-	addForm()
-	{
-		console.log('i m new form')
-	}
-
 	view(formName,viewName)
 	{
 		if(!this.views[viewName])
