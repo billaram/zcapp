@@ -1,6 +1,6 @@
 # ZCApp
 [![travis build](https://img.shields.io/travis/billaram/zcapp.svg?style=flat-square)](https://travis-ci.org/billaram/zcapp)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
 # Introduction
 Zoho Creator CRUD API node driver connects to app scope and then APIs like create,update,delete and view records can be invoked in method chaining approach. All APIs returns promise.
