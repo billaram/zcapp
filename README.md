@@ -3,7 +3,7 @@ Creator CRUD API node driver, It connects to app scope and then APIs like create
 
 # Getting Started
 
-* clone this repo git clone https://git.csez.zohocorpin.com/ramkumar.m/zcapp.git
+* clone this repo 
 * cd zcapp
 * npm install
 
