@@ -12,6 +12,17 @@ Zoho Creator CRUD API node driver connects to app scope and then APIs like creat
 * View Record API
 * Delete Record API
 
+## Response Structure
+
+All response structures are common 
+```javascript
+	{
+		actualresponse:'// holds actual response sent by creator',
+		data:'null if status failed otherwise holds proper parsed response',
+		status:"success or failed"
+	}
+}
+```
 ## Example
 
 ```javascript
@@ -85,7 +96,40 @@ var criteria ={
 
 app.form('formLinkName').update(formdata,criteria)
 	.then((response) =>{
-
+		/* sample response
+			"actualresponse": {
+		        "formname": [
+		            "formLinkName",
+		            {
+		                "operation": [
+		                    "update",
+		                    {
+		                        "criteria": "task_type==\"feat\"",
+		                        "newvalues": [
+		                            {
+		                                "description": "Test",
+		                                "title": "Test Task",
+		                                "task_type": "feat"
+		                            }
+		                        ],
+		                        "status": "Success"
+		                    }
+		                ]
+		            }
+		        ]
+		    },
+		    "data": {
+		        "updatedvalues": [
+		            {
+		                "description": "Test",
+		                "title": "Test Task",
+		                "task_type": "feat"
+		            }
+		        ],
+		        "criteria": "task_type==\"feat\""
+		    },
+		    "status": "success"
+		*/
 	})
 
 //View Record API
@@ -104,7 +148,7 @@ app.view('formLinkName','viewLinkName').find(criteria,startingIndex,limit)
 		{
 			"actualresponse": {
 		
-		        "tasks": [
+		        "formLinkName": [
 		            {
 		                "description": "Test",
 		                "ID": 1946659000002032000,
@@ -125,7 +169,7 @@ app.view('formLinkName','viewLinkName').find(criteria,startingIndex,limit)
 
 		*/
 	})
-// instead of array it returns an object in data array
+// instead of array it returns an object in data key
 app.view('formLinkName','viewLinkName').findOne(criteria)
 	.then((response) =>{
 		/* sample response
@@ -155,18 +199,34 @@ app.view('formLinkName','viewLinkName').findOne(criteria)
 	})
 
 //Delete Record API
-var criteria ={
-	task_type:"feat",
-	title:{
-		op:"=="
-		value:"test"
-	}
-
+var delete_criteria = {
+	task_type:"feat"
 }
-
-app.form('formLinkName').delete(formdata,criteria)
+app.form('formLinkName').delete(delete_criteria)
 	.then((response) =>{
-
+		/* sample response
+			{
+				"actualresponse": {
+			        "formname": [
+			            "tasks",
+			            {
+			                "operation": [
+			                    "delete",
+			                    {
+			                        "criteria": "task_type==\"feat\"",
+			                        "status": "Success"
+			                    }
+			                ]
+			            }
+			        ]
+			    },
+			    "data": {
+			        "criteria": "task_type==\"feat\"",
+			        "status": "Success"
+			    },
+			    "status": "success"
+			}
+		*/
 
 	})
 
