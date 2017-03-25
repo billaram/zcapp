@@ -41,7 +41,6 @@ class View{
 			query['limit'] = limit
 		}
 		query =  querystring.stringify(query)
-		console.log(this.endpoint,query)
 		return new Promise((resolve,reject) =>{
 			API.get(this.endpoint,query)
 				.then((response) => {
@@ -78,7 +77,6 @@ class View{
 				.catch(e =>{
 					this.logs.push({url:this.endpoint,criteria:criteria,startindex:startingIndex,limit:limit,err:e})
 					reject(e)
-					console.log(e)
 				})
 		})
 	}
