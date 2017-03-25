@@ -1,16 +1,30 @@
 {
   "name": "zcapp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zoho creator API node sdk",
   "main": "src/app/ZCapp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ramkumar M <ramchiyan1093@gmail.com >",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.0",
     "querystring": "^0.2.0",
     "request": "^2.81.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billaram/zcapp.git"
+  },
+  "keywords": [
+    "Zoho",
+    "Creator",
+    "API"
+  ],
+  "bugs": {
+    "url": "https://github.com/billaram/zcapp/issues"
+  },
+  "homepage": "https://github.com/billaram/zcapp#readme"
 }
