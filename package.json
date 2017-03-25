@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha test/*.js -w",
-    "test:single": "mocha test/*.js",
+    "test:single": "istanbul cover -x test/*.js _mocha -- -R spec test/*.js",
     "commit": "git cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -21,9 +21,12 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "codecov.io": "0.1.6",
+    "report-coverage":"cat ./coverage/lcov.info | codecov",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
     "ghooks": "2.0.0",
+    "istanbul": "0.4.5",
     "mocha": "3.2.0",
     "semantic-release": "^6.3.2"
   },
@@ -31,8 +34,8 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     },
-    "ghooks":{
-      "pre-commit":"npm run test:single"
+    "ghooks": {
+      "pre-commit": "npm run test:single"
     }
   },
   "repository": {
