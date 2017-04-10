@@ -1,3 +1,4 @@
+"use strict";
 var API = require('./api.js')
 var Promise = require('bluebird')
 var Util = require('./util')

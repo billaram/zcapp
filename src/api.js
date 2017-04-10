@@ -1,3 +1,4 @@
+"use strict";
 var querystring = require('querystring')
 var Promise = require('bluebird')
 var request = require('request')

@@ -1,3 +1,4 @@
+"use strict";
 var moment = require('moment-timezone')
 //moment.tz.load(require('.data/packed/latest.json'));
 var Util = (function(){
@@ -30,7 +31,7 @@ var Util = (function(){
 
 	var formatDate = function(date,timezone,format)
 	{
-		m_date= moment(date)
+		var m_date= moment(date)
 		return m_date.tz(timezone).format(format)
 	}
 

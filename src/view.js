@@ -1,3 +1,4 @@
+"use strict";
 var Promise = require('bluebird');
 var querystring = require('querystring')
 var API = require('./api.js')
