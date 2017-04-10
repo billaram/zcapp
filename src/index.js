@@ -1,3 +1,4 @@
+"use strict";
 var Form = require('./form')
 var View = require('./view')
 var API = require('./api.js')
