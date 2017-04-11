@@ -6,15 +6,20 @@ class Form{
 	constructor(appconf,formconf){
 		this.appconf = appconf
 		this.formName = formconf.formName
+		this.endpointURL = 'https://creator.zoho.com/api/';
 	}
 
 	add(formdata)
 	{
 		return this.post(formdata)
 	}
+	changeEndPointURL(url)
+	{
+		this.endpointURL = url;
+	}
 	update(formdata,criteria)
 	{
-		this.endpoint = 'https://creator.zoho.com/api/'+this.appconf.ownername+'/json/'
+		this.endpoint = this.endpointURL+this.appconf.ownername+'/json/'
 			+this.appconf.appName+'/form/'+this.formName+'/record/update'
 
 		formdata['authtoken'] = this.appconf.authtoken
@@ -73,7 +78,7 @@ class Form{
 	}
 	post(formdata)
 	{
-		this.endpoint = 'https://creator.zoho.com/api/'+this.appconf.ownername+'/json/'
+		this.endpoint = this.endpointURL+this.appconf.ownername+'/json/'
 			+this.appconf.appName+'/form/'+this.formName+'/record/add'
 		formdata['authtoken'] = this.appconf.authtoken
 		formdata['scope'] = 'creatorapi'
@@ -126,7 +131,7 @@ class Form{
 	}
 	delete(criteria)
 	{
-		this.endpoint = 'https://creator.zoho.com/api/'+this.appconf.ownername+'/json/'
+		this.endpoint = this.endpointURL+this.appconf.ownername+'/json/'
 			+this.appconf.appName+'/form/'+this.formName+'/record/delete'
 		var formdata = {}
 		formdata['authtoken'] = this.appconf.authtoken

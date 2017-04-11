@@ -9,7 +9,12 @@ class View{
 	{
 		this.appconf = appconf;
 		this.viewName = viewconf.viewName;
-		this.formName = viewconf.formName
+		this.formName = viewconf.formName;
+		this.endpointURL = 'https://creator.zoho.com/api/';
+	}
+	changeEndPointURL(url)
+	{
+		this.endpointURL = url;
 	}
 	find(criteria,startingIndex,limit){
 		return this.get(criteria,startingIndex,limit)
@@ -19,8 +24,7 @@ class View{
 	}
 	get(criteria,startingIndex,limit)
 	{
-		this.endpoint = 'https://creator.zoho.com/api/json/'
-			+this.appconf.appName+'/view/'+this.viewName
+		this.endpoint = this.endpointURL+this.appconf.appName+'/view/'+this.viewName
 		var query = {}
 		
 		query['authtoken'] = this.appconf.authtoken
