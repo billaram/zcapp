@@ -38,16 +38,23 @@ class ZCapp
 	}
 	form(formName)
 	{
-		var appconf = {
-			appName:this.appName,
-			ownername:this.ownername,
-			authtoken:this.authtoken
+		if(!this.forms[formName])
+		{
+			var appconf = {
+				appName:this.appName,
+				ownername:this.ownername,
+				authtoken:this.authtoken
+			}
+			var formconf = {
+				formName:formName
+			}
+			var form = new Form(appconf,formconf)
+			this.addForm(formName,form)
+			return form;
 		}
-		var formconf = {
-			formName:formName
+		else{
+			return this.forms[viewName]
 		}
-		var form = new Form(appconf,formconf)
-		return form;
 
 	}
 	addView(viewName,view)

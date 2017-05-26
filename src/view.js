@@ -10,7 +10,7 @@ class View{
 		this.appconf = appconf;
 		this.viewName = viewconf.viewName;
 		this.formName = viewconf.formName;
-		this.endpointURL = 'https://creator.zoho.com/api/';
+		this.endpointURL = 'https://creator.zoho.com/api/json/';
 	}
 	changeEndPointURL(url)
 	{
