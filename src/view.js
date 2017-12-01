@@ -52,7 +52,6 @@ class View{
 					try
 					{
 						response = JSON.parse(response)
-						
 						var records = response[this.formName]
 						if(records != undefined)
 						{
@@ -65,6 +64,12 @@ class View{
 							if(limit == 1)
 							{
 								resp['data'] = records[0]
+							}
+						}
+						else{
+							var resp ={
+								actualresponse:response,
+								status:'failed'
 							}
 						}
 					}
@@ -80,7 +85,6 @@ class View{
 					resolve(resp)
 				})
 				.catch(e =>{
-					this.logs.push({url:this.endpoint,criteria:criteria,startindex:startingIndex,limit:limit,err:e})
 					reject(e)
 				})
 		})
