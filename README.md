@@ -11,10 +11,10 @@ Zoho Creator CRUD API node driver connects to app scope and then APIs like creat
 
 ## CRUD functions
 
-* [Create Record API](create-record-api)
-* [Update Record API](update-record-api)
-* [View Record API](view-record-api)
-* [Delete Record API](delete-record-api)
+* [Create Record API](#create-record-api)
+* [Update Record API](#update-record-api)
+* [View Record API](#view-record-api)
+* [Delete Record API](#delete-record-api)
 
 ## Response Structure
 
