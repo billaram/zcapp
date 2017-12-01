@@ -30,6 +30,8 @@ All response structures are common
 ```
 ## Example
 
+### Create Record API
+
 ```javascript
 var ZCapp = require('zcapp');
 var app = new ZCapp({
@@ -87,6 +89,12 @@ app.form('formLinkName').add(formdata)
 		console.log('CATCH ',e)
 	})
 
+```
+
+### Update Record API
+
+
+```javascript
 //Update Record API
 var criteria ={
 	task_type:"feat",
@@ -135,6 +143,12 @@ app.form('formLinkName').update(formdata,criteria)
 		*/
 	})
 
+```
+
+
+### View Record API
+
+```javascript
 //View Record API
 var criteria ={
 	task_type:"feat",
@@ -201,10 +215,17 @@ app.view('formLinkName','viewLinkName').findOne(criteria)
 		*/
 	})
 
+```
+
+
+### Delete Record API
+
+```javascript
 //Delete Record API
 var delete_criteria = {
 	task_type:"feat"
 }
+
 app.form('formLinkName').delete(delete_criteria)
 	.then((response) =>{
 		/* sample response
@@ -235,4 +256,18 @@ app.form('formLinkName').delete(delete_criteria)
 
 ```
 
+
+## Exception Handling
+
+Exceptions are handled using catch followed by then functions, refere bluebird promise for more details. Here is sample code for catching exceptions in APIs
+
+```javascript
+app.form('formLinkName').delete(delete_criteria)
+	.then((response) =>{
+		console.log('response',response)
+	})
+	.catch((err) =>{
+		console.log('error',err)
+	})
+```
 
