@@ -53,7 +53,7 @@ class ZCapp
 			return form;
 		}
 		else{
-			return this.forms[viewName]
+			return this.forms[formName]
 		}
 
 	}
